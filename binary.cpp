@@ -2,22 +2,22 @@
 using namespace std;
 int main()
 {
-	int A[1000],n,B;
+	int x[1000],n,B;
 	cin >> n;
 	for(int i=0;i<n;i++)
-		cin >> A[i];
+		cin >> x[i];
 	cin >> B;
 
 	int low=0;int high=n-1;int result=-1;
     while(low<=high)
     {
        int mid=high+low/2;
-        if(A[mid]<=B )
+        if(x[mid]<=B )
         {
             result=mid;
             low=mid+1;
         }
-        else if(A[mid]>B)
+        else if(x[mid]>B)
         {
             high=mid-1;
         }
